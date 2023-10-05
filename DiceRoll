@@ -1,0 +1,21 @@
+'''
+Dice Roll Generator
+-------------------------------------------------------------
+'''
+
+
+import random
+import os
+
+
+def num_die():
+  while True:
+      try:
+          num_dice = input('Number of dice: ')
+          valid_responses = ['1', 'one', 'two', '2']
+          if num_dice not in valid_responses:
+              raise ValueError('1 or 2 only')
+          else:
+              return num_dice
+      except ValueError as err:
+          print(err)
